@@ -22,7 +22,6 @@ The website highlights the beauty of Pakistan’s diverse landscapes — from th
 ## 📁 Folder Structure
 
 <pre>
-/
 ├── index.html  
 ├── page2.html  
 ├── styles.css  
