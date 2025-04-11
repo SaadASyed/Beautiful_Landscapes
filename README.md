@@ -21,17 +21,7 @@ The website highlights the beauty of Pakistan’s diverse landscapes — from th
 
 ## 📁 Folder Structure
 
-/ ├── index.html
-├── page2.html
-├── styles.css
-├── Images/
-│ ├── IslamabadHighWay.jpg
-│ ├── NWFPGreenery.jpg
-│ └── Balochistan.jpg
-├── Videos/
-│ └── Islamabad.mp4
-└── Recording/
-└── MidModule_Assignment_Recording.mp3
+<pre> / ├── index.html ├── page2.html ├── styles.css ├── Images/ │ ├── IslamabadHighWay.jpg │ ├── NWFPGreenery.jpg │ └── Balochistan.jpg ├── Videos/ │ └── Islamabad.mp4 └── Recording/ └── MidModule_Assignment_Recording.mp3 </pre>
 
 ---
 
