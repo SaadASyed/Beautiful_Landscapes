@@ -1,7 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     const form = document.getElementById("registerForm");
+    const messageBox = document.getElementById("formMessage");
 
+    //1. Check is user data is already stored
+    const storeduser = localStorage.getItem("userData");
+    if (storeduser) {
+        const user = JSON.parse(storeduser);
+        showMessage(`Welcome back, ${user.name} from ${user.region}`, "success")
+    }
+
+    //2. Listen to submissions
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         const name = document.getElementById("name").value.trim()
@@ -25,17 +34,23 @@ document.addEventListener("DOMContentLoaded", function() {
         if (errorMessage) {
             showMessage(errorMessage, "error");
         } else {
-            alert("Thank you for registering");
-        form.reset();
-        }
+            const userData = {
+                name,
+                email,
+                region
+            }
+            localStorage.setItem("userData", JSON.stringify(userData));
+            showMessage(`Thank you for registering, ${name}`, "success");
+            form.reset()
+        }  
     });
 
-    function errorMessage(msg, type) {
+    function showMessage(msg, type) {
         messageBox.innerHTML = msg;
         messageBox.className = `form-message ${type}`;
         messageBox.style.display = "block";
 
-        setTImeout(() =>{
+        setTimeout(() => {
             messageBox.style.opacity = 1;
         }, 100);
     }
